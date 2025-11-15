@@ -76,7 +76,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t border-border">
+          <div className="md:hidden bg-white/80 backdrop-blur-md shadow-lg border-t border-white/20">
             <div className="px-4 py-4 space-y-3">
               {['Home', 'Services', 'Pricing', 'Gallery', 'Reviews', 'Book Now'].map((item) => (
                 <button
