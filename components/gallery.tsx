@@ -90,7 +90,8 @@ export default function Gallery() {
           {filteredImages.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              onClick={() => setPreviewImage(image)}
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
             >
               <img
                 src={image.url || "/placeholder.svg"}
@@ -98,13 +99,49 @@ export default function Gallery() {
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <h3 className="text-white text-xl font-bold">{image.title}</h3>
-                <p className="text-white text-sm font-semibold">{image.category}</p>
+                <h3 style={{ color: '#FFFFFF' }} className="text-xl font-bold">{image.title}</h3>
+                <p style={{ color: '#FFFFFF' }} className="text-sm font-semibold">{image.category}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Preview Modal */}
+      {previewImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50"
+          onClick={() => setPreviewImage(null)}
+        >
+          <div
+            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center p-6 border-b border-gray-200">
+              <h2 className="text-2xl font-bold text-charcoal">{previewImage.title}</h2>
+              <button
+                onClick={() => setPreviewImage(null)}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                aria-label="Close preview"
+              >
+                <X className="w-6 h-6 text-charcoal" />
+              </button>
+            </div>
+            <div className="flex-1 overflow-auto p-6">
+              <img
+                src={previewImage.url || "/placeholder.svg"}
+                alt={previewImage.title}
+                className="w-full h-auto rounded-lg object-cover"
+              />
+              <div className="mt-6">
+                <p className="text-gray-600 text-lg">
+                  <span className="font-semibold text-charcoal">Category:</span> {previewImage.category}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
