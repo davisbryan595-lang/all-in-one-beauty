@@ -97,7 +97,7 @@ export default function Gallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <h3 className="text-white text-xl font-bold">{image.title}</h3>
-                <p className="text-gold text-sm font-semibold">{image.category}</p>
+                <p className="text-white text-sm font-semibold">{image.category}</p>
               </div>
             </div>
           ))}
