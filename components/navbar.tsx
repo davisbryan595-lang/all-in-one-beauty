@@ -17,6 +17,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (isOpen) {
+      setDisplayedItems([])
+      const menuItems = ['Home', 'Services', 'Pricing', 'Gallery', 'Reviews', 'Book Now']
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          setDisplayedItems((prev) => [...prev, item])
+        }, index * 50)
+      })
+    } else {
+      setDisplayedItems([])
+    }
+  }, [isOpen])
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: 'smooth' })
