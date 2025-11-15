@@ -94,7 +94,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed top-16 left-0 right-0 z-30 md:hidden h-[30vh] w-screen bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20 animate-[mobileMenuFadeIn_0.3s_ease-out]">
+        <div className="fixed top-16 left-0 right-0 z-30 md:hidden h-[30vh] w-screen bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20 mobile-menu">
           <div className="px-4 py-4 space-y-3 h-full flex flex-col">
             {displayedItems.map((item, index) => (
               <button
