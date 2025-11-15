@@ -112,7 +112,7 @@ export default function Blog() {
                 </div>
 
                 {/* CTA */}
-                <Button className="cta-button w-full bg-gold hover:bg-gold/90 text-charcoal font-semibold group">
+                <Button className="w-full btn-gradient-gold group">
                   Read More
                   <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -122,7 +122,7 @@ export default function Blog() {
         </div>
 
         <div className="text-center">
-          <Button className="cta-button bg-peach hover:bg-peach/90 text-charcoal font-semibold px-8 py-6">
+          <Button className="px-8 py-6 btn-gradient-peach">
             View All Articles →
           </Button>
         </div>
