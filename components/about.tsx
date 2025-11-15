@@ -84,9 +84,9 @@ export default function About() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1560066169-b279ca0d4ff3?w=600&h=700&fit=crop"
-                alt="Beauty studio interior"
-                className="rounded-2xl shadow-2xl"
+                src="https://images.pexels.com/photos/7750101/pexels-photo-7750101.jpeg?auto=compress&cs=tinysrgb&w=600&h=700&fit=crop"
+                alt="Luxury beauty studio salon interior with contemporary design"
+                className="rounded-2xl shadow-2xl w-full h-full object-cover"
               />
               <div className="absolute -bottom-6 -right-6 bg-gold p-6 rounded-2xl shadow-lg">
                 <p className="text-charcoal font-display text-3xl font-bold">12K+</p>
