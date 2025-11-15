@@ -117,14 +117,14 @@ export default function Services() {
         {/* CTA Section */}
         <div className="mt-16 bg-white rounded-2xl p-12 text-center border border-peach/20">
           <h3 className="text-2xl font-bold text-charcoal mb-4">
-            Didn't find what you're looking for?
+            Interested in a specific service?
           </h3>
           <p className="text-gray-600 mb-6">
-            We offer custom services and packages. Contact us for personalized consultations.
+            We offer custom packages and consultations. Book with us today to experience our premium services.
           </p>
           <Button
             onClick={() => scrollToSection('booking')}
-            className="cta-button bg-peach hover:bg-peach/90 text-charcoal font-semibold px-8 py-6"
+            className="px-8 py-6 btn-gradient-premium"
           >
             Schedule a Consultation
           </Button>
