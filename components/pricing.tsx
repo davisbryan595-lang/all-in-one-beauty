@@ -68,7 +68,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-8">
           {pricingTiers.map((tier, index) => (
             <Card
               key={index}
@@ -92,13 +92,13 @@ export default function Pricing() {
 
               <Button
                 onClick={() => scrollToSection('booking')}
-                className={`cta-button w-full py-6 font-semibold rounded-lg transition-all ${
+                className={`w-full py-6 rounded-lg ${
                   tier.featured
-                    ? 'bg-gold hover:bg-gold/90 text-charcoal'
-                    : 'bg-peach hover:bg-peach/90 text-charcoal'
+                    ? 'btn-gradient-premium'
+                    : 'btn-gradient-gold'
                 }`}
               >
-                Book This Service
+                Book Service
               </Button>
             </Card>
           ))}
