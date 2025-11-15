@@ -104,7 +104,7 @@ export default function Services() {
 
                   <Button
                     onClick={() => scrollToSection('pricing')}
-                    className="cta-button w-full bg-gold hover:bg-gold/90 text-charcoal font-semibold px-4 py-2"
+                    className="w-full px-4 py-2 btn-gradient-gold"
                   >
                     See Pricing →
                   </Button>
