@@ -113,7 +113,7 @@ export default function Press() {
         <div className="mt-16 bg-gradient-to-r from-gold/10 to-peach/10 rounded-2xl p-8 text-center border border-gold/20">
           <h3 className="text-2xl font-bold text-charcoal mb-3">For Press Inquiries</h3>
           <p className="text-gray-600 mb-6">Contact our media team for interviews, features, and partnership opportunities.</p>
-          <Button className="cta-button bg-gold hover:bg-gold/90 text-charcoal font-semibold px-8 py-6">
+          <Button className="px-8 py-6 btn-gradient-premium">
             press@beautyalliance.com
           </Button>
         </div>
