@@ -9,13 +9,14 @@
   --gold: #FFD700;
   --charcoal: #1A1A1A;
   --white: #FFFFFF;
-  
+  --light-pink: #FFF0F5;
+
   /* Design Tokens */
-  --background: var(--white);
+  --background: var(--light-pink);
   --foreground: var(--charcoal);
-  --card: var(--white);
+  --card: var(--light-pink);
   --card-foreground: var(--charcoal);
-  --popover: var(--white);
+  --popover: var(--light-pink);
   --popover-foreground: var(--charcoal);
   --primary: var(--charcoal);
   --primary-foreground: var(--white);
@@ -36,7 +37,7 @@
   --chart-4: #C9A961;
   --chart-5: #B8985F;
   --radius: 0.625rem;
-  --sidebar: var(--white);
+  --sidebar: var(--light-pink);
   --sidebar-foreground: var(--charcoal);
   --sidebar-primary: var(--charcoal);
   --sidebar-primary-foreground: var(--white);
@@ -114,6 +115,7 @@
   --color-charcoal: rgb(26 26 26 / <alpha-value>);
   /* Add white color with opacity support */
   --color-white: rgb(255 255 255 / <alpha-value>);
+  --color-light-pink: rgb(255 240 245 / <alpha-value>);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -151,5 +153,15 @@
 @layer components {
   .glow {
     box-shadow: 0 10px 15px -3px rgba(255, 215, 0, 0.2);
+  }
+
+  /* CTA Button Styles */
+  .cta-button {
+    @apply transition-all duration-300;
+  }
+
+  .cta-button:hover {
+    @apply shadow-lg;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 10px 15px -3px rgba(255, 215, 0, 0.2);
   }
 }
