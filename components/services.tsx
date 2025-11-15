@@ -1,49 +1,56 @@
 import { Card } from '@/components/ui/card'
-import { Sparkles, Leaf, Heart, Zap, Crown, Palette } from 'lucide-react'
+import { Sparkles, Scissors, Wand2, Eye, Droplet, Zap, Heart, Radio } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const services = [
   {
     icon: Sparkles,
-    title: 'Hair Styling',
-    description: 'Expert styling for every occasion with premium results.',
-    features: ['Silk Press & Straightening', 'Protective Braids', 'Custom Weaves', 'Blowouts & Waves', 'Styling & Curling'],
+    title: 'Hair Services',
+    description: 'Complete hair care and styling solutions.',
+    features: ['Hair Styling of Any Kind', 'Japanese Hair Straightening', '100% Human Hair Weft Extensions', 'Tape-In Extensions', 'Professional Coloring'],
     color: 'bg-gold/10',
   },
   {
-    icon: Leaf,
-    title: 'Natural Hair Care',
-    description: 'Specialized treatment for healthy, beautiful natural hair.',
-    features: ['Natural Hair Treatments', 'Protective Styling', 'Loc Maintenance', 'Curl Definition', 'Deep Conditioning'],
+    icon: Scissors,
+    title: 'Skin & Hair Removal',
+    description: 'Professional waxing, threading, and hair removal.',
+    features: ['Wax Services', 'Threading', 'Full Body Waxing', 'Facial Waxing', 'Precision Hair Removal'],
     color: 'bg-peach/10',
   },
   {
-    icon: Palette,
-    title: 'Color Services',
-    description: 'Professional coloring that brings out your best self.',
-    features: ['Full Color & Highlights', 'Balayage & Ombre', 'Color Correction', 'Toning & Gloss', 'Trending Colors'],
+    icon: Eye,
+    title: 'Lashes',
+    description: 'Beautiful, voluminous lashes for any occasion.',
+    features: ['Lash Extensions', 'Lash Lifting', 'Lash Tinting', 'Lash Perming', 'Natural Lash Care'],
     color: 'bg-gold/5',
   },
   {
-    icon: Crown,
-    title: 'Extensions',
-    description: 'Premium hair extensions for length, volume, and style.',
-    features: ['Hand-Tied Extensions', 'Tape-In Extensions', 'Sew-In Weaves', 'Clip-In Extensions', 'Extension Care'],
+    icon: Heart,
+    title: 'Nails & Manicure',
+    description: 'Premium nail care and manicure services.',
+    features: ['Manicure Services', 'Pedicure Services', 'Gel Nails', 'Nail Art', 'Nail Extensions'],
     color: 'bg-peach/5',
   },
   {
-    icon: Heart,
-    title: 'Bridal & Events',
-    description: 'Make your special day unforgettable with stunning styling.',
-    features: ['Bridal Hair Design', 'Bridesmaids Styling', 'Photoshoot Styling', 'Event Preparation', 'Makeup Coordination'],
+    icon: Droplet,
+    title: 'Facials & Treatments',
+    description: 'Professional skincare and facial treatments.',
+    features: ['Professional Facials', 'Lip Fillers', 'Skin Rejuvenation', 'Acne Treatment', 'Anti-Aging Facials'],
     color: 'bg-gold/10',
   },
   {
-    icon: Zap,
-    title: 'Add-On Services',
-    description: 'Enhance your service with premium treatments.',
-    features: ['Scalp Treatment', 'Deep Conditioning', 'Protein Treatment', 'Keratin Treatment', 'Hair Strengthening'],
+    icon: Radio,
+    title: 'Body & Aesthetic',
+    description: 'Advanced body contouring and rejuvenation.',
+    features: ['Ultrasound Cavitation', 'Radio Frequency Therapy', 'Lipo-Laser Treatment', 'Vacuum Therapy', 'Cellulite Treatment'],
     color: 'bg-peach/10',
+  },
+  {
+    icon: Zap,
+    title: 'Advanced Treatments',
+    description: 'Cutting-edge aesthetic and wellness solutions.',
+    features: ['Liquid Lipo Shots', 'Fat Dissolver Injections', 'Vacuum Lymphatic Drainage', 'Body Contouring', 'Face & Body Rejuvenation'],
+    color: 'bg-gold/5',
   },
 ]
 
