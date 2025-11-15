@@ -26,18 +26,18 @@ export default function Hero() {
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-gold">
               <Sparkles size={20} />
-              <span className="text-sm font-semibold tracking-widest">PROFESSIONAL STYLING</span>
+              <span className="text-sm font-semibold tracking-widest">PREMIUM BEAUTY & AESTHETIC SERVICES</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-display font-bold text-charcoal leading-tight text-balance">
               ALL IN ONE BEAUTY STUDIO
             </h1>
             <p className="text-xl text-peach font-display italic">
-              Where Every Look Tells a Story
+              Your Complete Beauty & Wellness Destination
             </p>
           </div>
 
           <p className="text-lg text-gray-600 leading-relaxed text-balance">
-            Professional styling • Stunning results • Book today and transform your beauty journey with expert care and premium services.
+            From luxury hair services to advanced aesthetic treatments - everything you need for your complete beauty transformation. Professional expertise, premium results.
           </p>
 
           {/* CTA Buttons */}
