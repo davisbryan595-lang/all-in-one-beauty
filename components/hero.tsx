@@ -44,14 +44,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button
               onClick={() => scrollToSection('gallery')}
-              className="bg-gold hover:bg-gold/90 text-charcoal font-semibold text-base px-8 py-6"
+              className="cta-button bg-gold hover:bg-gold/90 text-charcoal font-semibold text-base px-8 py-6"
             >
               View My Work
             </Button>
             <Button
               onClick={() => scrollToSection('booking')}
-              variant="outline"
-              className="border-2 border-peach text-peach hover:bg-peach/10 font-semibold text-base px-8 py-6"
+              className="cta-button bg-peach hover:bg-peach/90 text-charcoal font-semibold text-base px-8 py-6"
             >
               Book Now
             </Button>

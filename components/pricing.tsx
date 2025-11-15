@@ -43,7 +43,7 @@ export default function Pricing() {
   }
 
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-peach/5 to-white">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-light-pink">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
@@ -78,10 +78,10 @@ export default function Pricing() {
 
               <Button
                 onClick={() => scrollToSection('booking')}
-                className={`w-full py-6 font-semibold rounded-lg transition-all ${
+                className={`cta-button w-full py-6 font-semibold rounded-lg transition-all ${
                   tier.featured
                     ? 'bg-gold hover:bg-gold/90 text-charcoal'
-                    : 'bg-peach hover:bg-peach/90 text-white'
+                    : 'bg-peach hover:bg-peach/90 text-charcoal'
                 }`}
               >
                 Book This Service

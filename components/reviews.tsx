@@ -55,7 +55,7 @@ export default function Reviews() {
   }
 
   return (
-    <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-peach/5">
+    <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8 bg-light-pink">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
@@ -83,13 +83,13 @@ export default function Reviews() {
           {/* Navigation Buttons */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 md:-translate-x-20 p-3 rounded-full bg-gold hover:bg-gold/90 text-white transition-all"
+            className="cta-button absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 md:-translate-x-20 p-3 rounded-full bg-gold hover:bg-gold/90 text-charcoal transition-all"
           >
             <ChevronLeft size={24} />
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 md:translate-x-20 p-3 rounded-full bg-gold hover:bg-gold/90 text-white transition-all"
+            className="cta-button absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 md:translate-x-20 p-3 rounded-full bg-gold hover:bg-gold/90 text-charcoal transition-all"
           >
             <ChevronRight size={24} />
           </button>
