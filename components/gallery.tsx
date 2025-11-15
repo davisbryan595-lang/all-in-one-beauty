@@ -74,9 +74,9 @@ export default function Gallery() {
             <Button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`cta-button px-6 py-2 rounded-full font-semibold transition-all ${
+              className={`px-6 py-2 rounded-full font-semibold transition-all ${
                 selectedCategory === cat
-                  ? 'bg-gold text-charcoal'
+                  ? 'btn-gradient-gold'
                   : 'bg-peach/10 text-charcoal hover:bg-peach/20'
               }`}
             >
