@@ -57,7 +57,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Button
               onClick={() => scrollToSection('booking')}
-              className="hidden md:inline-flex bg-gold hover:bg-gold/90 text-charcoal font-semibold"
+              className="cta-button hidden md:inline-flex bg-gold hover:bg-gold/90 text-charcoal font-semibold"
             >
               Book Appointment
             </Button>

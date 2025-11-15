@@ -52,7 +52,7 @@ export default function Booking() {
   }
 
   return (
-    <section id="booking" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-peach/5 to-white">
+    <section id="booking" className="py-20 px-4 sm:px-6 lg:px-8 bg-light-pink">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
@@ -183,7 +183,7 @@ export default function Booking() {
             <Button
               type="submit"
               disabled={submitted}
-              className="w-full bg-gold hover:bg-gold/90 text-charcoal font-semibold text-base py-6 rounded-lg transition-all"
+              className="cta-button w-full bg-gold hover:bg-gold/90 text-charcoal font-semibold text-base py-6 rounded-lg transition-all"
             >
               {submitted ? 'Booking Confirmed!' : 'Confirm My Booking'}
             </Button>

@@ -55,7 +55,7 @@ export default function Gallery() {
     selectedCategory === 'All' ? galleryImages : galleryImages.filter((img) => img.category === selectedCategory)
 
   return (
-    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-light-pink">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
@@ -72,7 +72,7 @@ export default function Gallery() {
             <Button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all ${
+              className={`cta-button px-6 py-2 rounded-full font-semibold transition-all ${
                 selectedCategory === cat
                   ? 'bg-gold text-charcoal'
                   : 'bg-peach/10 text-charcoal hover:bg-peach/20'

@@ -10,7 +10,7 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-gold mb-4">
               All in One Beauty Studio
             </h3>
-            <p className="text-gray-300 text-sm">
+            <p className="text-white text-sm">
               Professional styling, stunning results, and premium care for your hair transformation journey.
             </p>
           </div>
@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-gold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-white">
               <li><a href="#services" className="hover:text-gold transition-colors">Services</a></li>
               <li><a href="#pricing" className="hover:text-gold transition-colors">Pricing</a></li>
               <li><a href="#gallery" className="hover:text-gold transition-colors">Gallery</a></li>
@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold text-gold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-white">
               <li>📱 (555) 123-4567</li>
               <li>📧 hello@beautyalliance.com</li>
               <li className="pt-2 text-xs">Available for bookings daily 9AM-6PM</li>
@@ -64,7 +64,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-gold/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
             <p>© 2025 All in One Beauty Studio. Proudly serving our community.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>

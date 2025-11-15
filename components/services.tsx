@@ -30,7 +30,7 @@ export default function Services() {
   }
 
   return (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-light-pink">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
@@ -58,8 +58,7 @@ export default function Services() {
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 <Button
                   onClick={() => scrollToSection('pricing')}
-                  variant="ghost"
-                  className="text-gold hover:text-gold/80 font-semibold"
+                  className="cta-button bg-gold hover:bg-gold/90 text-charcoal font-semibold px-4 py-2"
                 >
                   See Pricing →
                 </Button>

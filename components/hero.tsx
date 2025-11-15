@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-br from-background via-white to-peach/5"
+      className="relative min-h-screen flex items-center justify-center pt-16 bg-light-pink"
     >
       {/* Animated background sparkles */}
       <div className="absolute inset-0 overflow-hidden">
@@ -44,14 +44,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button
               onClick={() => scrollToSection('gallery')}
-              className="bg-gold hover:bg-gold/90 text-charcoal font-semibold text-base px-8 py-6"
+              className="cta-button bg-gold hover:bg-gold/90 text-charcoal font-semibold text-base px-8 py-6"
             >
               View My Work
             </Button>
             <Button
               onClick={() => scrollToSection('booking')}
-              variant="outline"
-              className="border-2 border-peach text-peach hover:bg-peach/10 font-semibold text-base px-8 py-6"
+              className="cta-button bg-peach hover:bg-peach/90 text-charcoal font-semibold text-base px-8 py-6"
             >
               Book Now
             </Button>
