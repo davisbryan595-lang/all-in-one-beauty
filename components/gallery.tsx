@@ -96,11 +96,11 @@ export default function Gallery() {
               <img
                 src={image.url || "/placeholder.svg"}
                 alt={image.title}
-                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full min-h-64 sm:min-h-80 h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <h3 style={{ color: '#FFFFFF' }} className="text-xl font-bold">{image.title}</h3>
-                <p style={{ color: '#FFFFFF' }} className="text-sm font-semibold">{image.category}</p>
+                <h3 style={{ color: '#FFFFFF' }} className="text-lg sm:text-xl font-bold">{image.title}</h3>
+                <p style={{ color: '#FFFFFF' }} className="text-xs sm:text-sm font-semibold">{image.category}</p>
               </div>
             </div>
           ))}
@@ -110,31 +110,32 @@ export default function Gallery() {
       {/* Preview Modal */}
       {previewImage && (
         <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50"
+          className="fixed inset-0 bg-black/80 flex items-center justify-center p-3 sm:p-4 z-50 overflow-y-auto"
           onClick={() => setPreviewImage(null)}
+          style={{ top: 0, left: 0, right: 0, bottom: 0 }}
         >
           <div
-            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto flex flex-col"
+            className="bg-white rounded-2xl w-full max-w-2xl my-auto flex flex-col max-h-[85vh] sm:max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-center p-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-charcoal">{previewImage.title}</h2>
+            <div className="flex justify-between items-center p-4 sm:p-6 border-b border-gray-200 flex-shrink-0">
+              <h2 className="text-xl sm:text-2xl font-bold text-charcoal line-clamp-2">{previewImage.title}</h2>
               <button
                 onClick={() => setPreviewImage(null)}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0 ml-4"
                 aria-label="Close preview"
               >
-                <X className="w-6 h-6 text-charcoal" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6 text-charcoal" />
               </button>
             </div>
-            <div className="flex-1 overflow-auto p-6">
+            <div className="flex-1 overflow-y-auto p-4 sm:p-6">
               <img
                 src={previewImage.url || "/placeholder.svg"}
                 alt={previewImage.title}
                 className="w-full h-auto rounded-lg object-cover"
               />
               <div className="mt-6">
-                <p className="text-gray-600 text-lg">
+                <p className="text-gray-600 text-base sm:text-lg">
                   <span className="font-semibold text-charcoal">Category:</span> {previewImage.category}
                 </p>
               </div>
