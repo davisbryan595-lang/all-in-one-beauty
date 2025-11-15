@@ -43,7 +43,7 @@ export default function Newsletter() {
           />
           <Button
             type="submit"
-            className="cta-button bg-gold hover:bg-gold/90 text-charcoal font-semibold px-8 py-3 rounded-lg whitespace-nowrap"
+            className="px-8 py-3 rounded-lg whitespace-nowrap btn-gradient-gold"
           >
             Subscribe
           </Button>
