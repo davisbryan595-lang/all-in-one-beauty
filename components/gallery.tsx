@@ -21,9 +21,9 @@ const galleryImages = [
     category: 'Color',
   },
   {
-    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hitube_XWTuW4Z68H_2025_11_15_05_22_16-nvd1fjyBwSe9nYiv9Wlb5xVRFUj69s.jpg',
-    title: 'Radiant Glow',
-    category: 'Color',
+    url: 'https://cdn.builder.io/api/v1/image/assets%2F5c758e804cba4fa3a488e9088887877b%2F950c0034e2014ef58891a6d0c8f91152?format=webp&width=800',
+    title: 'Platinum Elegance',
+    category: 'Straightening',
   },
   {
     url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hitube_hweCP7okAx_2025_11_15_05_23_11-F3C8OQdS6VpvZ9Y8WXCyY1t4ygLZ1x.jpg',
