@@ -4,9 +4,15 @@ import { useState, useEffect } from 'react'
 import Navbar from '@/components/navbar'
 import Hero from '@/components/hero'
 import Services from '@/components/services'
+import Stats from '@/components/stats'
+import About from '@/components/about'
+import Transformations from '@/components/transformations'
 import Pricing from '@/components/pricing'
 import Gallery from '@/components/gallery'
 import Reviews from '@/components/reviews'
+import Blog from '@/components/blog'
+import Press from '@/components/press'
+import Newsletter from '@/components/newsletter'
 import Booking from '@/components/booking'
 import Footer from '@/components/footer'
 import SparklePreloader from '@/components/sparkle-preloader'
@@ -28,9 +34,15 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <Stats />
+      <About />
+      <Transformations />
       <Pricing />
       <Gallery />
       <Reviews />
+      <Blog />
+      <Press />
+      <Newsletter />
       <Booking />
       <Footer />
     </main>
