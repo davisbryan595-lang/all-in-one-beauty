@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-br from-background via-white to-peach/5"
+      className="relative min-h-screen flex items-center justify-center pt-16 bg-light-pink"
     >
       {/* Animated background sparkles */}
       <div className="absolute inset-0 overflow-hidden">
