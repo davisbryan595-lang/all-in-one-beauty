@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
 
         {/* Image */}
-        <div className="relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative min-h-80 sm:min-h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl aspect-square md:aspect-auto">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hitube_TjA8qluXg5_2025_11_15_05_23_06-nD9kSqpGvgzLMR98dZQaVFr6vI2a9b.jpg"
             alt="Transformation showcase"
