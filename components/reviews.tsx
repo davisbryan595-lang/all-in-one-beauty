@@ -68,30 +68,30 @@ export default function Reviews() {
 
         <div className="relative">
           {/* Testimonial Card */}
-          <Card className="p-12 border border-gold/30 bg-white rounded-2xl min-h-80 flex flex-col justify-center">
+          <Card className="p-8 sm:p-12 border border-gold/30 bg-white rounded-2xl min-h-80 flex flex-col justify-center pr-16 sm:pr-12 pl-16 sm:pl-12">
             <div className="flex gap-1 mb-4">
               {[...Array(testimonials[current].rating)].map((_, i) => (
                 <Star key={i} size={20} className="fill-gold text-gold" />
               ))}
             </div>
-            <p className="text-2xl text-charcoal mb-6 italic leading-relaxed">
+            <p className="text-xl sm:text-2xl text-charcoal mb-6 italic leading-relaxed">
               "{testimonials[current].text}"
             </p>
-            <p className="text-xl font-bold text-gold">{testimonials[current].name}</p>
+            <p className="text-lg sm:text-xl font-bold text-gold">{testimonials[current].name}</p>
           </Card>
 
           {/* Navigation Buttons */}
           <button
             onClick={prev}
-            className="cta-button absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 md:-translate-x-20 p-3 rounded-full bg-gold hover:bg-gold/90 text-charcoal transition-all"
+            className="cta-button absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 sm:-translate-x-16 md:-translate-x-20 p-2 sm:p-3 rounded-full bg-gold hover:bg-gold/90 text-charcoal transition-all z-10"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={next}
-            className="cta-button absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 md:translate-x-20 p-3 rounded-full bg-gold hover:bg-gold/90 text-charcoal transition-all"
+            className="cta-button absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 sm:translate-x-16 md:translate-x-20 p-2 sm:p-3 rounded-full bg-gold hover:bg-gold/90 text-charcoal transition-all z-10"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={20} className="sm:w-6 sm:h-6" />
           </button>
 
           {/* Dots */}
