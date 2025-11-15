@@ -1,12 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X, ShoppingCart } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [displayedItems, setDisplayedItems] = useState<string[]>([])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (isOpen) {
+      setDisplayedItems([])
+      const menuItems = ['Home', 'Services', 'Pricing', 'Gallery', 'Reviews', 'Book Now']
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          setDisplayedItems((prev) => [...prev, item])
+        }, index * 50)
+      })
+    } else {
+      setDisplayedItems([])
+    }
+  }, [isOpen])
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: 'smooth' })
@@ -23,74 +38,79 @@ export default function Navbar() {
   }
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-2xl font-display font-bold text-primary hover:text-accent transition-colors"
-            >
-              <span className="text-gold">✨</span> All in One
-            </button>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {['Home', 'Services', 'Pricing', 'Gallery', 'Reviews', 'Book Now'].map((item) => (
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20'
+            : 'bg-transparent'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <div className="flex-shrink-0">
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                className="text-foreground hover:text-gold transition-colors font-medium text-sm"
+                onClick={() => scrollToSection('home')}
+                className="text-2xl font-display font-bold text-primary hover:text-accent transition-colors"
               >
-                {item}
+                <span className="text-gold">✨</span> All in One
               </button>
-            ))}
-          </div>
+            </div>
 
-          {/* CTA Button & Mobile Menu */}
-          <div className="flex items-center gap-4">
-            <Button
-              onClick={() => scrollToSection('booking')}
-              className="cta-button hidden md:inline-flex bg-gold hover:bg-gold/90 text-charcoal font-semibold"
-            >
-              Book Appointment
-            </Button>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-foreground"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden bg-white/80 backdrop-blur-md shadow-lg border-t border-white/20">
-            <div className="px-4 py-4 space-y-3">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
               {['Home', 'Services', 'Pricing', 'Gallery', 'Reviews', 'Book Now'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="block w-full text-left px-4 py-2 text-foreground hover:bg-peach/10 rounded transition-colors"
+                  className="text-foreground hover:text-gold transition-colors font-medium text-sm"
                 >
                   {item}
                 </button>
               ))}
             </div>
+
+            {/* CTA Button & Mobile Menu */}
+            <div className="flex items-center gap-4">
+              <Button
+                onClick={() => scrollToSection('booking')}
+                className="cta-button hidden md:inline-flex bg-gold hover:bg-gold/90 text-charcoal font-semibold"
+              >
+                Book Appointment
+              </Button>
+
+              {/* Mobile Menu Toggle */}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="md:hidden text-foreground"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="fixed top-16 left-0 right-0 z-30 md:hidden h-[30vh] bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20 mobile-menu overflow-hidden">
+          <div className="px-4 py-4 space-y-3 h-full flex flex-col overflow-y-auto">
+            {displayedItems.map((item, index) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                className="block w-full text-left px-4 py-2 text-foreground hover:bg-peach/10 rounded transition-colors mobile-menu-item flex-shrink-0"
+                style={{
+                  animationDelay: `${index * 50}ms`
+                }}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   )
 }
