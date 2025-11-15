@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [displayedItems, setDisplayedItems] = useState<string[]>([])
 
   useEffect(() => {
     const handleScroll = () => {
