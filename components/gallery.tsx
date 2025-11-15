@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { X } from 'lucide-react'
 
 const galleryImages = [
   {
@@ -35,7 +36,7 @@ const galleryImages = [
     category: 'Color',
   },
   {
-    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hitube_YyDJCnsdvT_2025_11_15_05_23_10-BE113sEBxvajof2c5Nkfr UzZf7ZV4ew.jpg',
+    url: 'https://cdn.builder.io/api/v1/image/assets%2F5c758e804cba4fa3a488e9088887877b%2Facb96db4de86414b9a6eaa6daf501ed8?format=webp&width=800',
     title: 'Silky Straight',
     category: 'Straightening',
   },
@@ -50,6 +51,7 @@ const categories = ['All', 'Straightening', 'Waves', 'Color']
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('All')
+  const [previewImage, setPreviewImage] = useState<typeof galleryImages[0] | null>(null)
 
   const filteredImages =
     selectedCategory === 'All' ? galleryImages : galleryImages.filter((img) => img.category === selectedCategory)
