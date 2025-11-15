@@ -139,6 +139,33 @@
   }
   body {
     @apply bg-background text-foreground;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* iOS safe area support */
+  @supports (padding: max(0px)) {
+    body {
+      padding-left: max(0px, env(safe-area-inset-left));
+      padding-right: max(0px, env(safe-area-inset-right));
+    }
+  }
+
+  /* Smooth scrolling for modal content on iOS */
+  .overflow-y-auto,
+  .overflow-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  textarea,
+  select {
+    font-size: 16px;
   }
   
   /* Custom font import */
