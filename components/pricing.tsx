@@ -4,34 +4,48 @@ import { Check } from 'lucide-react'
 
 const pricingTiers = [
   {
-    title: 'Hair Services',
-    icon: '✨',
+    title: 'Hair & Styling',
+    icon: '💆',
     items: [
-      { name: 'Silk Press', price: '$85' },
-      { name: 'Braids (Starting)', price: '$150' },
-      { name: 'Full Weave Install', price: '$250' },
-      { name: 'Color Treatment', price: '$60+' },
+      { name: 'Hair Styling', price: '$75+' },
+      { name: 'Weft Extensions Install', price: '$250+' },
+      { name: 'Tape-In Extensions', price: '$200+' },
+      { name: 'Japanese Hair Straightening', price: '$300+' },
+      { name: 'Professional Coloring', price: '$100+' },
     ],
   },
   {
-    title: 'Premium Packages',
-    icon: '👑',
+    title: 'Beauty Services',
+    icon: '✨',
     items: [
-      { name: 'Bridal Glow-Up', price: '$450' },
-      { name: 'Transformation Session', price: '$350' },
-      { name: 'Monthly Maintenance', price: '$280/mo' },
-      { name: 'VIP Booking', price: 'Contact' },
+      { name: 'Wax Services', price: '$30+' },
+      { name: 'Threading', price: '$15+' },
+      { name: 'Lash Services', price: '$80+' },
+      { name: 'Manicure & Pedicure', price: '$50+' },
+      { name: 'Professional Facials', price: '$120+' },
     ],
     featured: true,
   },
   {
-    title: 'Add-On Services',
+    title: 'Advanced Aesthetic',
+    icon: '🔮',
+    items: [
+      { name: 'Lip Fillers', price: '$400+' },
+      { name: 'Liquid Lipo Shots', price: '$350+' },
+      { name: 'Ultrasound Cavitation', price: '$200+' },
+      { name: 'Radio Frequency Therapy', price: '$250+' },
+      { name: 'Lipo-Laser Treatment', price: '$300+' },
+    ],
+  },
+  {
+    title: 'Body Treatments',
     icon: '💎',
     items: [
-      { name: 'Deep Conditioning', price: '$25' },
-      { name: 'Scalp Treatment', price: '$35' },
-      { name: 'Protective Styling', price: '+$50' },
-      { name: 'Same-Day Rush Fee', price: '+$40' },
+      { name: 'Vacuum Therapy', price: '$180+' },
+      { name: 'Vacuum Lymphatic Drainage', price: '$150+' },
+      { name: 'Cellulite Treatment', price: '$200+' },
+      { name: 'Body Contouring', price: 'Contact' },
+      { name: 'Custom Packages', price: 'Contact' },
     ],
   },
 ]
@@ -54,7 +68,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-8">
           {pricingTiers.map((tier, index) => (
             <Card
               key={index}
@@ -78,13 +92,13 @@ export default function Pricing() {
 
               <Button
                 onClick={() => scrollToSection('booking')}
-                className={`cta-button w-full py-6 font-semibold rounded-lg transition-all ${
+                className={`w-full py-6 rounded-lg ${
                   tier.featured
-                    ? 'bg-gold hover:bg-gold/90 text-charcoal'
-                    : 'bg-peach hover:bg-peach/90 text-charcoal'
+                    ? 'btn-gradient-premium'
+                    : 'btn-gradient-gold'
                 }`}
               >
-                Book This Service
+                Book Service
               </Button>
             </Card>
           ))}

@@ -6,12 +6,24 @@ import { Card } from '@/components/ui/card'
 import { AlertCircle, CheckCircle } from 'lucide-react'
 
 const services = [
-  'Silk Press',
-  'Braids',
-  'Full Weave',
-  'Color Treatment',
-  'Natural Hair Care',
-  'Special Occasion',
+  'Hair Styling',
+  'Japanese Hair Straightening',
+  'Weft Extensions & Tape-In Extensions',
+  'Hair Coloring',
+  'Wax Services',
+  'Threading',
+  'Lash Services',
+  'Manicure & Pedicure',
+  'Professional Facials',
+  'Lip Fillers',
+  'Ultrasound Cavitation',
+  'Radio Frequency Therapy',
+  'Lipo-Laser Treatment',
+  'Liquid Lipo Shots',
+  'Fat Dissolver Injections',
+  'Vacuum Therapy',
+  'Vacuum Lymphatic Drainage',
+  'Cellulite Treatment',
 ]
 
 export default function Booking() {
@@ -56,10 +68,10 @@ export default function Booking() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
-            BOOK YOUR TRANSFORMATION
+            BOOK YOUR APPOINTMENT
           </h2>
           <p className="text-lg text-gray-600">
-            Schedule your appointment and let's create magic with your hair
+            Schedule your service and experience world-class beauty and aesthetic treatments
           </p>
         </div>
 
@@ -183,7 +195,7 @@ export default function Booking() {
             <Button
               type="submit"
               disabled={submitted}
-              className="cta-button w-full bg-gold hover:bg-gold/90 text-charcoal font-semibold text-base py-6 rounded-lg transition-all"
+              className="w-full font-semibold text-base py-6 rounded-lg transition-all disabled:opacity-50 btn-gradient-premium"
             >
               {submitted ? 'Booking Confirmed!' : 'Confirm My Booking'}
             </Button>

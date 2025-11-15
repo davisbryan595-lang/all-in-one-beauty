@@ -215,6 +215,43 @@
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 10px 15px -3px rgba(255, 215, 0, 0.2);
   }
 
+  /* Gradient Button Styles */
+  .btn-gradient-gold {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%) !important;
+    color: #1A1A1A !important;
+    font-weight: 600 !important;
+    transition: all 0.3s duration !important;
+  }
+
+  .btn-gradient-gold:hover {
+    background: linear-gradient(135deg, #FFC700 0%, #FFB700 100%) !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 10px 15px -3px rgba(255, 215, 0, 0.2) !important;
+  }
+
+  .btn-gradient-peach {
+    background: linear-gradient(135deg, #FFB6C1 0%, #FFA0B5 100%) !important;
+    color: #1A1A1A !important;
+    font-weight: 600 !important;
+    transition: all 0.3s duration !important;
+  }
+
+  .btn-gradient-peach:hover {
+    background: linear-gradient(135deg, #FFA0B5 0%, #FF90A5 100%) !important;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.4), 0 10px 15px -3px rgba(255, 182, 193, 0.2) !important;
+  }
+
+  .btn-gradient-premium {
+    background: linear-gradient(135deg, #FFD700 0%, #FFB6C1 100%) !important;
+    color: #1A1A1A !important;
+    font-weight: 600 !important;
+    transition: all 0.3s duration !important;
+  }
+
+  .btn-gradient-premium:hover {
+    background: linear-gradient(135deg, #FFC700 0%, #FFA0B5 100%) !important;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 10px 15px -3px rgba(255, 182, 193, 0.2) !important;
+  }
+
   .mobile-menu {
     animation: mobileMenuFadeIn 0.3s ease-out;
   }

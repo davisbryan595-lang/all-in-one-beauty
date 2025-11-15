@@ -17,11 +17,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const navItems = ['Home', 'Services', 'About', 'Gallery', 'Reviews', 'Blog', 'Book Now']
+
   useEffect(() => {
     if (isOpen) {
       setDisplayedItems([])
-      const menuItems = ['Home', 'Services', 'Pricing', 'Gallery', 'Reviews', 'Book Now']
-      menuItems.forEach((item, index) => {
+      navItems.forEach((item, index) => {
         setTimeout(() => {
           setDisplayedItems((prev) => [...prev, item])
         }, index * 50)
@@ -59,8 +60,8 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              {['Home', 'Services', 'Pricing', 'Gallery', 'Reviews', 'Book Now'].map((item) => (
+            <div className="hidden lg:flex items-center gap-6">
+              {navItems.map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -94,8 +95,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed top-16 left-0 right-0 z-30 md:hidden h-[30vh] bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20 mobile-menu overflow-hidden">
-          <div className="px-4 py-4 space-y-3 h-full flex flex-col overflow-y-auto">
+        <div className="fixed top-16 left-0 right-0 z-30 lg:hidden bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20 mobile-menu overflow-hidden max-h-[60vh]">
+          <div className="px-4 py-4 space-y-3 flex flex-col overflow-y-auto">
             {displayedItems.map((item, index) => (
               <button
                 key={item}
