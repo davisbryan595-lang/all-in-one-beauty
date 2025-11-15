@@ -70,14 +70,14 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                Founded in 2012, All in One Beauty Studio began with a simple vision: to create a sanctuary where every client feels valued, celebrated, and transformed. What started as a small salon has grown into an internationally recognized beauty destination.
+                Founded in 2012, All in One Beauty Studio began with a simple vision: to create a comprehensive beauty sanctuary where clients can access everything they need for total transformation. What started as a boutique salon has evolved into a full-service beauty and aesthetic clinic, recognized internationally for our expertise and innovation.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our passion is helping people discover their best selves through expert styling, innovative techniques, and genuine care. We've had the honor of styling thousands of clients—from everyday transformations to red carpet events—and every single experience fuels our commitment to excellence.
+                Today, we offer over 20 premium services—from luxury hair care and styling to cutting-edge aesthetic treatments and body contouring. Our team of certified professionals is dedicated to providing exceptional results while creating a welcoming, judgment-free environment. Every client deserves to feel beautiful, confident, and celebrated.
               </p>
               <Button
                 onClick={() => scrollToSection('booking')}
-                className="cta-button bg-gold hover:bg-gold/90 text-charcoal font-semibold px-8 py-6"
+                className="px-8 py-6 btn-gradient-premium"
               >
                 Book Your Transformation
               </Button>
